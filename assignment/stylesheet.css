@@ -1,0 +1,152 @@
+@import 'reset-styles.css';
+
+:root {
+    /* Color palette */
+    /* Referenced from: https://www.csscodelab.com/css-flexbox-color-palette-code-snippet/ */
+    --clr-light-green: hsl(168, 31%, 69%);
+    --clr-yellow: hsl(42, 78%, 70%);
+    --clr-orange: hsl(9, 40%, 56%);
+    --clr-red: hsl(337, 34%, 34%);
+    --clr-gray: hsl(0, 0%, 72%);
+    --clr-shadow: hsla(0, 0%, 35%, 30%);
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --z-top: 6;
+    --z-higher: 4;
+    --z-lower: 2;
+    --z-base: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    font-family: 'Arvo', Arial, Helvetica, sans-serif;
+}
+
+/* Header & Footer-specific styles */
+header,
+footer {
+    position: relative;
+}
+
+header {
+    color: var(--clr-yellow);
+    z-index: var(--z-top);
+}
+
+header > div:first-child {
+    padding-top: 1.26em;
+    padding-bottom: 0.86em;
+    padding-left: 2ch;
+}
+
+header > div:first-child > h1 {
+    font-weight: var(--fw-regular);
+}
+
+header > div:nth-child(2) {
+    padding: 0.56em;
+}
+
+header > div:nth-child(3),
+footer > div:nth-child(2) {
+    height: 2em;
+}
+
+header > div:nth-child(4),
+footer > div:nth-child(1) {
+    height: 1.2em;
+}
+
+footer > div:nth-child(3) {
+    height: 3em;
+}
+
+footer > div:nth-child(4) {
+    height: 4em;
+}
+
+
+/* Body-specific styles */
+body {
+    background-image: url('record.png');
+    background-size: 12.5%;
+    background-repeat: repeat;
+    margin: 0;
+}
+
+/* Main-specific styles */
+main {
+    background-color: var(--clr-gray);
+    margin: 1em;
+}
+
+main > p {
+    margin: 10em 0px;
+}
+
+
+/* Individual style control elements */
+
+.red-background {
+    background-color: var(--clr-red);
+}
+
+.orange-background {
+    background-color: var(--clr-orange);
+}
+
+.yellow-background {
+    background-color: var(--clr-yellow);
+}
+
+.light-green-background {
+    background-color: var(--clr-light-green);
+}
+
+.shadow {
+    box-shadow: 0px 6px 5px var(--clr-shadow);
+}
+
+.shadow-top {
+    box-shadow: 0px -6px 5px var(--clr-shadow);
+}
+
+.z-top {
+    position: inherit;
+    z-index: var(--z-top);
+}
+
+.z-higher {
+    position: inherit;
+    z-index: var(--z-higher);
+}
+
+.z-lower {
+    position: inherit;
+    z-index: var(--z-lower);
+}
+
+.z-base {
+    position: inherit;
+    z-index: var(--z-base);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+    padding-right: 8ch;
+}
